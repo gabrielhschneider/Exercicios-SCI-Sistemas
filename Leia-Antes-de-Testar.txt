@@ -1,0 +1,12 @@
+# Aqui estão algumas informações relevantes sobre os projetos contidos nestas pastas e sobre quem os codificou. #
+
+- Estes exercícios foram todos feitos em Delphi 10.4 versão community Edition;
+- Todos projetos são Windows VCL - Application, utilizando os formulários para melhor interação com o usuário;
+- Não foram realizados tratamentos de erros nesta versão dos projetos;
+
+
+
+
+Obs:
+- Recentemente me formei no programa +DevsToBlu, onde estudei a linguagem de programação Delphi na FURB por 6 meses, neste curso que foi do básico ao avançado, nos preparando até mesmo para a certificação da embarcadero, aprendi recursos, ferramentas e componentes muito úteis para programação nesta linguagem, por este motivo escolhi o Delphi, apesar de saber programar em Python e em Java.
+ 
