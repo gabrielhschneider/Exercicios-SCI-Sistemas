@@ -44,21 +44,22 @@ implementation
 {Funcao que Define os numeros Impares e Pares e joga na tela}
 Procedure TForm1.DefinirNumeros;
 var
-  I      : Integer;
-  xNumero: Integer;
-  xMedia : Double;
+  I, xNumero : Integer;
+  xMedia     : Double;
   xArrayNumeros: Array[1..5] of Integer;
 begin
 
   xMedia := 0;
   xNumero:= 0;
 
+  //Adicionando numero ao array
   xArrayNumeros[1] := StrToInt(Edit1.Text);
   xArrayNumeros[2] := StrToInt(Edit2.Text);
   xArrayNumeros[3] := StrToInt(Edit3.Text);
   xArrayNumeros[4] := StrToInt(Edit4.Text);
   xArrayNumeros[5] := StrToInt(Edit5.Text);
 
+  //Perconrrendo o array e separando numeros pares e impares
   for I := 1 to Length(xArrayNumeros) do
   begin
 
@@ -75,6 +76,7 @@ begin
     end
   end;
 
+  //Limpando os campos inseridos
   Edit1.Clear;
   Edit2.Clear;
   Edit3.Clear;

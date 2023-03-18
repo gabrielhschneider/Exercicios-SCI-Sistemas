@@ -141,13 +141,4 @@ object Form1: TForm1
     TabOrder = 7
     ItemSeparator = '\'
   end
-  object btnEncerrar: TButton
-    Left = 632
-    Top = 8
-    Width = 47
-    Height = 25
-    Caption = 'X'
-    TabOrder = 8
-    OnClick = btnEncerrarClick
-  end
 end

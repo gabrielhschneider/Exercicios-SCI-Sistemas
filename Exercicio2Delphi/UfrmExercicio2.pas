@@ -50,12 +50,14 @@ var
   xArrayNumeros: Array[1..5] of Double;
 begin
 
+  //Adicionando numeros ao array
   xArrayNumeros[1] := StrToFloat(Edit1.Text);
   xArrayNumeros[2] := StrToFloat(Edit2.Text);
   xArrayNumeros[3] := StrToFloat(Edit3.Text);
   xArrayNumeros[4] := StrToFloat(Edit4.Text);
   xArrayNumeros[5] := StrToFloat(Edit5.Text);
 
+  //Percorrendo array e comparando menor e maior numero
   for I := 1 to Length(xArrayNumeros) do
   begin
     if I = 1 then
@@ -75,6 +77,13 @@ begin
 
   edtMaior.Text := xNumeroMaior.ToString;
   edtMenor.Text := xNumeroMenor.ToString;
+
+  //Limpando campos
+  Edit1.Clear;
+  Edit2.Clear;
+  Edit3.Clear;
+  Edit4.Clear;
+  Edit5.Clear;
 
 end;
 

@@ -3,7 +3,7 @@ unit UfrmExercicio3;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.StdCtrls, Vcl.Grids, Vcl.Outline, Vcl.ExtCtrls;
 
 type
@@ -23,9 +23,7 @@ type
     Label7: TLabel;
     pnlRegistrar: TPanel;
     olSeparador: TOutline;
-    btnEncerrar: TButton;
     Label8: TLabel;
-    procedure btnEncerrarClick(Sender: TObject);
     procedure pnlRegistrarClick(Sender: TObject);
   private
     { Private declarations }
@@ -42,10 +40,11 @@ var
 implementation
 
 uses
-  Vcl.Dialogs;
+  Vcl.Dialogs, Winapi.Windows, System.UITypes;
 
 {$R *.dfm}
 
+//Função que adiciona o Aluno e registra sua media
 procedure TForm1.AdicionarAluno;
 var
   xNome,xResultado: string;
@@ -58,7 +57,7 @@ begin
   mmRegistro.Lines.Add('Aluno: ' + xNome + '; Média: ' + formatFloat('0.00',xMedia) +
   '; Situação: ' + xResultado);
 
-  {Limpando os campos Inseridos}
+  //Limpando os campos Inseridos
     edtNota1.Clear;
     edtNota2.Clear;
     edtNota3.Clear;
@@ -66,7 +65,7 @@ begin
     edtNome.Clear;
 end;
 
-
+//Funcao que calcula a media
 function TForm1.CalcularMedia: double;
 var
   xNota1, xNota2, xNota3, xNota4: double;
@@ -79,6 +78,7 @@ begin
   result := (xNota1 + xNota2 + xNota3 + xNota4) / 4;
 end;
 
+//Funcao que checa a aprovacao
 function TForm1.ChecarAprovacao(pMedia: double): string;
 
 begin
@@ -88,22 +88,21 @@ begin
     result:= 'Reprovado'
 end;
 
+//Evento do botao
 procedure TForm1.pnlRegistrarClick(Sender: TObject);
 begin
-{ if Dialogs .MessageDlg('Welcome to my Delphi application.  Exit now?',
+  Self.AdicionarAluno;
+
+  if MessageDlg('O aluno foi registrado.  Deseja continuar utilizando a aplicação?',
     mtConfirmation, [mbYes, mbNo], 0, mbYes) = mrYes then
+
+  else
   begin
-    Dialogs.MessageDlg('Exiting the Delphi application.', mtInformation,
-      [mbOk], 0, mbOk);}
-    Self.AdicionarAluno;
-end;
+    MessageDlg('Saindo da aplicação.', mtInformation,
+      [mbOk], 0, mbOk);
+      form1.Close;
+  end;
 
-//Encerrar Aplicacao
-procedure TForm1.btnEncerrarClick(Sender: TObject);
-begin
-  mmRegistro.Clear;
-  ShowMessage('Encerrada');
 end;
-
 
 end.

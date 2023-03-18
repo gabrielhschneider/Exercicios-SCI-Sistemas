@@ -48,6 +48,7 @@ begin
 
   xNumero:= 0;
 
+  //Adiciona numeros ao array
   xArrayNumeros[1] := StrToFloat(Edit1.Text);
   xArrayNumeros[2] := StrToFloat(Edit2.Text);
   xArrayNumeros[3] := StrToFloat(Edit3.Text);
@@ -56,6 +57,7 @@ begin
 
   lblPosicao3.Caption := 'Posicao [3] = ' +  xArrayNumeros[3].ToString;
 
+  //Limpa os campos
   edit1.Clear;
   edit2.Clear;
   edit3.Clear;

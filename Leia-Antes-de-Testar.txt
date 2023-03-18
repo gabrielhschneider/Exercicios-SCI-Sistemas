@@ -1,8 +1,16 @@
 # Aqui estão algumas informações relevantes sobre os projetos contidos nestas pastas e sobre quem os codificou. #
 
 - Estes exercícios foram todos feitos em Delphi 10.4 versão community Edition;
-- Todos projetos são Windows VCL - Application, utilizando os formulários para melhor interação com o usuário;
+- Os projetos do exercicio 1 ao 4 foram desenvolvidos em Windows VCL - Application, utilizando os formulários para melhor interação com o usuário;
+- O exercicio 5 foi desenvolvido em Console Application, devido a grande quantidade de dados solicitados, facilitando assim a interacao com o usuario;
 - Não foram realizados tratamentos de erros nesta versão dos projetos;
+
+
+
+
+
+
+
 
 
 
